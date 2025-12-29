@@ -1,0 +1,11 @@
+[Unit]
+Description=BadVPN 7200 Service
+After=network.target
+[Service]
+
+ExecStart=/bin/badvpn --listen-addr 127.0.0.1:7200 --max-clients 1000 --max-connections-for-client 10
+Restart=always
+User=root
+
+ [Install]
+WantedBy=multi-user.target
