@@ -1,0 +1,11 @@
+[Unit]
+Description=Proxy Python 2 Service
+After=network.target
+[Service]
+
+ExecStart=/usr/bin/python2 /etc/adm-firu/sockspython80.py
+Restart=always
+User=root
+
+ [Install]
+WantedBy=multi-user.target
